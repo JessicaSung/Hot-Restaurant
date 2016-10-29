@@ -15,11 +15,28 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
-require('./app/routing/api-routes.js')(app);
-require('./app/routing/html-routes.js')(app);
+// var apiroute=require('./app/routing/api-routes.js')(app);
+// var htmlroute=require('./app/routing/html-routes.js')(app);
+
 
 app.listen(PORT, function(){
 	console.log("App listening on PORT: "+PORT);
 
 });
+
+
+//===============================
+app.get('/', function (req, res) {
+	res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+app.get('/tables', function (req, res) {
+	res.sendFile(path.join(__dirname, 'tables.html'));
+});
+
+app.get('/reservation', function (req, res) {
+	res.sendFile(path.join(__dirname, 'reservation.html'));
+});
+// Search for Specific Character (or all characters) - provides JSON
+
 
