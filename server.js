@@ -18,13 +18,6 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 // var apiroute=require('./app/routing/api-routes.js')(app);
 // var htmlroute=require('./app/routing/html-routes.js')(app);
 //==================================================================
-function Reservation(name,phone,email,id){
-	this.name=name;
-	this.phone=phone;
-	this.email=email;
-	this.id=id;
-
-}
 
 var currentReservation =[
 	{
@@ -71,3 +64,14 @@ app.get('/api/tables', function(req,res){
 app.get('/api/waitList', function(req,res) {
 		res.json(waitList);
 });
+
+app.post('api/new', function (req,res) {
+	var newreservation = req.body
+
+	console.log(newreservation);
+	if(currentReservation.length == 5) {
+		waitList.push(newreservation);
+	} else {
+		currentReservation.push(newreservation);
+	}
+})
