@@ -107,7 +107,14 @@
 				email: $('#emailInput').val().trim(),
 				id: $('#idInput').val().trim()
 			}
-		})
+
+			$.post('http://localhost:8080/api/new', newreservation)
+			.done(function(data) {
+				console.log(data);
+
+			});
+			return false;
+		});
 
 
 	</script>

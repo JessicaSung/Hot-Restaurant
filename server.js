@@ -74,4 +74,6 @@ app.post('api/new', function (req,res) {
 	} else {
 		currentReservation.push(newreservation);
 	}
+
+	res.json(newreservation);
 })
