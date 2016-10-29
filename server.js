@@ -26,9 +26,8 @@ function Reservation(name,phone,email,id){
 
 }
 
-var currentReservation =[{name: 'ed',phone: '512-111-1111',email:'ed.r@gmail.com',id:1}];
-var waitList =[];
-
+var currentReservation =[{name: 'Ed',phone: '512-111-1111',email:'ed.r@gmail.com',id:1}];
+var waitList =[{name: 'Aly',phone: '512-555-1212',email:'aly@gmail.com',id:2}];
 
 
 //==================================================================
@@ -53,11 +52,19 @@ app.get('/reservation', function (req, res) {
 });
 
 
-app.get('/api', function(req,res){
+app.get('/api/tables', function(req,res){
 	for (var i=0; i< currentReservation.length; i++){
 		res.json(currentReservation[i]);
-		
 	}
-})
+});
+
+app.get('/api/waitList', function(req,res) {
+	for (var i=0; i < waitList.length;i++) {
+		res.json(waitList[i]);
+	}
+});
+
+
+
 
 
