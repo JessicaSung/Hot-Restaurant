@@ -17,7 +17,21 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 // var apiroute=require('./app/routing/api-routes.js')(app);
 // var htmlroute=require('./app/routing/html-routes.js')(app);
+//==================================================================
+function Reservation(name,phone,email,id){
+	this.name=name;
+	this.phone=phone;
+	this.email=email;
+	this.id=id;
 
+}
+
+var currentReservation =[{name: 'ed',phone: '512-111-1111',email:'ed.r@gmail.com',id:1}];
+var waitList =[];
+
+
+
+//==================================================================
 
 app.listen(PORT, function(){
 	console.log("App listening on PORT: "+PORT);
@@ -34,9 +48,16 @@ app.get('/tables', function (req, res) {
 	res.sendFile(path.join(__dirname, 'tables.html'));
 });
 
-// app.get('/reservation', function (req, res) {
-// 	res.sendFile(path.join(__dirname, 'reservation.html'));
-// });
-// Search for Specific Character (or all characters) - provides JSON
+app.get('/reservation', function (req, res) {
+	res.sendFile(path.join(__dirname, 'reservation.html'));
+});
+
+
+app.get('/api', function(req,res){
+	for (var i=0; i< currentReservation.length; i++){
+		res.json(currentReservation[i]);
+		
+	}
+})
 
 

@@ -6,10 +6,33 @@
 	<!-- bootstrap cdn -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<!-- css stylesheet -->
-	<link rel="stylesheet" href="./style.css">
+	<!-- <link rel="stylesheet" href="./style.css"> -->
 </head>
 <body>
+        <style type="text/css">
+      .align-center {
+        text-align: center;
+      }
 
+      li {
+        padding: 0 5px;
+        display: inline;
+        list-style: none;
+      }
+
+      .little-link:nth-child(1) {
+        border-right: solid 1px grey;
+      }
+
+      .big-link:nth-child(2) {
+        border-right: solid 1px grey;
+        border-left: solid 1px grey;
+      }
+
+      .big-font {
+        font-size: 24px;
+      }
+    </style>
 <!-- body wrapper -->
 <div class="container">
 
@@ -25,6 +48,44 @@
         </p>
   	</div>
 
+
+		<!-- add reservation  -->
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Table Reservation</h3>
+			</div>
+		
+			<div class="panel-body">		
+				<form>
+					<!-- input textboxes -->
+					<div class="form-group">
+						<label for="">Name</label>
+						<input type="text" class="form-control" id="nameInput">
+					</div>
+
+					<div class="form-group">
+						<label for="">Phone Number</label>
+						<input type="text" class="form-control" id="phoneNumberInput">
+					</div>
+
+					<div class="form-group">
+						<label for="">Email</label>
+						<input type="text" class="form-control" id="emailInput">
+					</div>
+
+					<div class="form-group">
+						<label for="">Unique ID</label>
+						<input type="text" class="form-control" id="idInput">
+					</div>
+					
+					<!-- submit button -->
+					<button type="submit" class="btn btn-primary" id="addTrain">Submit</button>
+				</form>
+			</div>
+		</div>
+
+
+	<!-- footer links -->
   	<div class="">
       <ul>
         <li class="little-link"><a href="#">API Table Link</a></li>
