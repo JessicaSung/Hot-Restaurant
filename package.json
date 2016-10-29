@@ -1,0 +1,28 @@
+{
+  "name": "hot-restaurant",
+  "version": "1.0.0",
+  "description": "Hot-Restaurant Team Aly-Jessica-Rick-Ed",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JessicaSung/Hot-Restaurant.git"
+  },
+  "keywords": [
+    "Hot-Restaurant"
+  ],
+  "author": "Aly-Jessica-Rick-Ed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JessicaSung/Hot-Restaurant/issues"
+  },
+  "homepage": "https://github.com/JessicaSung/Hot-Restaurant#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "node-mailer": "^0.1.1",
+    "twilio": "^2.11.0"
+  }
+}
