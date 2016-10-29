@@ -34,9 +34,9 @@ app.get('/tables', function (req, res) {
 	res.sendFile(path.join(__dirname, 'tables.html'));
 });
 
-// app.get('/reservation', function (req, res) {
-// 	res.sendFile(path.join(__dirname, 'reservation.html'));
-// });
+app.get('/reservation', function (req, res) {
+	res.sendFile(path.join(__dirname, 'reservation.html'));
+});
 // Search for Specific Character (or all characters) - provides JSON
 
 
