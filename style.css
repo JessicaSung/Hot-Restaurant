@@ -1,0 +1,22 @@
+.align-center {
+  text-align: center;
+}
+
+li {
+  padding: 0 5px;
+  display: inline;
+  list-style: none;
+}
+
+.little-link:nth-child(1) {
+  border-right: solid 1px grey;
+}
+
+.big-link:nth-child(2) {
+  border-right: solid 1px grey;
+  border-left: solid 1px grey;
+}
+
+.big-font {
+  font-size: 24px;
+}
