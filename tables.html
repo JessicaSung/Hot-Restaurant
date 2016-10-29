@@ -52,11 +52,7 @@
 
       <div class="panel panel-default">
         <div class="panel-heading">Waiting List</div>
-        <div class="panel-body">
-          <div class="well big-font">
-            <span class="label label-primary big-font">1</span>
-            | test
-          </div>
+        <div class="panel-body" id="waitingPanel">
         </div>
       </div>
 
@@ -80,10 +76,18 @@
 
             $('#reservationsPanel').append(newDiv);
           }
-
-
         })
+        $.get('http://localhost:8080/api/waitList', function(data) {
+          console.log(data);
+          for (var i = 0; i < data.length; i++) {
+            var name = data[i].name;
+            var id = data[i].id;
+            var newDiv = $('<div class="well big-font"><span class="label label-primary big-font">' + (i+1) + '</span>&nbsp|&nbsp</div>');
+            newDiv.append(name).append(id);
 
+            $('#waitingPanel').append(newDiv);
+          }
+        })
 
     </script>
     <!-- jQuery cdn -->

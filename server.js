@@ -69,7 +69,5 @@ app.get('/api/tables', function(req,res){
 });
 
 app.get('/api/waitList', function(req,res) {
-	for (var i=0; i < waitList.length;i++) {
-		res.json(waitList[i]);
-	}
+		res.json(waitList);
 });
